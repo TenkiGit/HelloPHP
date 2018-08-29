@@ -26,7 +26,8 @@ function main(){
         }
         
         if($flag==TRUE){
-            each('<h3>ログイン成功</h3>');
+            // each("<h3>ログイン成功</h3>");
+            var_dump($flag);
         }
         exit();
     }
