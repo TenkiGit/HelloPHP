@@ -34,7 +34,6 @@ function main(){
 		
 	}else if($_COOKIE['id']==NULL){
 		echo '<a href=../login.php>ログインページへ移動</a>';
-		
 	}
 }
 
