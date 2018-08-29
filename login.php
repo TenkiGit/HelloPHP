@@ -21,6 +21,7 @@ function main(){
 
         $user_data = user_data::get_userdata();//全ユーザーデータの取得
         
+        //全部参照しサーチ
         foreach($user_data as $data){
             if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
             {
@@ -31,15 +32,16 @@ function main(){
             }
         }
         
+        //Trueの場合
         if($flag==TRUE){
-            // each("<h3>ログイン成功</h3>");
+            // echo('<h3>ログイン成功</h3>');
             var_dump($flag); 
             setcookie('ID',$user_id,time()+(3600*24));//IDと変数(data)と有効時間
             setcookie('Name',$name,time()+(3600*24));
             setcookie('Email',$email,time()+(3600*24));
         }
 
-        
+
         header("Location:/");//リダイレクト
         exit();
     }

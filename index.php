@@ -16,7 +16,10 @@ function main(){
 	$template = './template/index.html';
 	$contents = common::html_output($template,$params);
 
-	
+	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
+	{
+		echo '<h3>ようこそ</h3>';
+	}
 
 	//出力
 	echo $contents;
