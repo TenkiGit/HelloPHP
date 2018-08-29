@@ -18,8 +18,8 @@ function main(){
 
         $user_data = user_data::get_userdata();//全ユーザーデータの取得
         
-        foreach($user_data as $_POST){
-            if($user_data['email'] == $_POST['email'] && $user_data['password'] == $_POST['password'])
+        foreach($user_data as $data){
+            if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
             {
                 $flag = TRUE;
             }
