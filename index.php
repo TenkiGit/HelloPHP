@@ -23,6 +23,8 @@ function main(){
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
 		echo 'ようこそ';
+	}else{
+		echo '<a href=../login.php>ログインページへ移動</a>';
 	}
 }
 
