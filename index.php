@@ -16,7 +16,7 @@ function main(){
 	$template = './template/index.html';
 	$params['ID'];
 
-	$params['user_data'] = user_data::get_userdata();
+	$params['user_data'] = user_data::get_userdata();//ここがNG
 	
 	$params = $_COOKIE;
 
