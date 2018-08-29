@@ -16,13 +16,14 @@ function main(){
 	$template = './template/index.html';
 	$contents = common::html_output($template,$params);
 
+	
+
+	//出力
+	echo $contents;
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
 		echo 'ようこそ';
 	}
-
-	//出力
-	echo $contents;
 }
 
 //aタグでHTMLを作る
