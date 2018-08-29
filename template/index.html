@@ -58,8 +58,14 @@
 	
 	<?php if($params['ID'] != NULL){ ?>
 	<a href="../logout.php">ログアウト</a>
-	
 	<?php } ?>
+
+	<ul>
+		<?php if($params['ID'] != NULL){ ?>
+			<?php foreach($params as $data) ?>
+				<li><?php $data ?></li>
+		<?php } ?>
+	</ul>
 
 
 

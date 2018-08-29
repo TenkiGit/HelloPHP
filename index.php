@@ -16,7 +16,7 @@ function main(){
 	$template = './template/index.html';
 	$params['ID'];
 	
-	$params = $_COOKIE['ID'];
+	$params = $_COOKIE;
 
 	$contents = common::html_output($template,$params);
 
