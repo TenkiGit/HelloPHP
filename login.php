@@ -12,6 +12,10 @@ try{
 
 
 function main(){
+    if($_SERVER["REQUEST_METHOD"]== 'POST'){
+        var_dump($_POST);
+        exit();
+    }
 	//テンプレートを指定
 	$template = './template/login.html';
 	$contents = common::html_output($template,$params);
@@ -20,5 +24,6 @@ function main(){
 
 	//出力
     echo $contents;
+   
     
 }
