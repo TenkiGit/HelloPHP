@@ -25,6 +25,5 @@ function main(){
 	echo $contents;
 }
 
-
 //aタグでHTMLを作る
 //login.phpとlogin.htmlを作成
