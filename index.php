@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="fb:admins" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="format-detection" content="telephone=no">
+	<link rev="made" href="">
+	<link rel="index" href="">
+	<link rel="shortcut icon" href="">
+	<link rel="icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="canonical" href="">
+	<meta property="og:url" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<title>hello world!!</title>
+	<meta property="og:title" content="">
+</head>
+<body>
+
+<div class="container">
+	<?php 
+	$month = '1月';
+	$day = '1日';
+	$month_val = 1;
+	$day_val = 1;
+	$time_h_val =12;
+	$time_t_val =50;
+	//var_dump出力
+	var_dump($month.$day);
+	//改行
+	echo '<br>';
+	//エコー出力echo 
+	$month.$day;
+	echo '';
+	var_dump($month_val.'/'.$day_val);
+	echo '';
+	//これは割り算になる
+	var_dump($month_val/$day_val); 
+	
+	echo '';//文字列の標準出力
+	var_dump($month_val.'月'.$day_val.'日'.$time_h_val.'時'.$time_t_val.'分');
+	
+	?>
+</div>
+</body>
+</html>
