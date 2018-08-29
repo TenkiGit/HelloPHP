@@ -19,5 +19,9 @@ function main(){
 	
 
 	//出力
-	echo $contents;
+    echo $contents;
+    
+    if($id!= null){
+        echo('aaaaaaa');
+    }
 }
