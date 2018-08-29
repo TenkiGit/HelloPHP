@@ -18,7 +18,7 @@ function main(){
 
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
-		echo '<h3>ようこそ</h3>';
+		echo 'ようこそ';
 	}
 
 	//出力
