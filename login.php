@@ -34,7 +34,7 @@ function main(){
         
         //Trueの場合
         if($flag==TRUE){
-            // echo('<h3>ログイン成功</h3>');
+            echo '<h3>ログイン成功</h3>';
             var_dump($flag); 
             setcookie('ID',$user_id,time()+(3600*24));//IDと変数(data)と有効時間
             setcookie('Name',$name,time()+(3600*24));
