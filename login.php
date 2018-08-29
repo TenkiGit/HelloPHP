@@ -13,14 +13,26 @@ try{
 
 function main(){
     if($_SERVER["REQUEST_METHOD"]== 'POST'){
-        var_dump($_POST);
+        // var_dump($_POST);
+        $flag = FALSE;
+
+        $user_data = user_data::get_userdata();//全ユーザーデータの取得
+        
+        foreach($user_data as $_POST){
+            if($user_data == $_POST['email'] || $user_data == $_POST['password'])
+            {
+                $flag = TRUE;
+            }
+        }
+        
+        if($flag==TRUE){
+            each('<h3>ログイン成功</h3>');
+        }
         exit();
     }
 	//テンプレートを指定
 	$template = './template/login.html';
 	$contents = common::html_output($template,$params);
-
-	
 
 	//出力
     echo $contents;
