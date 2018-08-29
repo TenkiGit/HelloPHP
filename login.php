@@ -21,7 +21,8 @@ function main(){
 	//出力
     echo $contents;
     
-    if($id!= null){
-        echo('aaaaaaa');
+    if(isset($_POST[‘id’])){
+        $id = $_POST[‘id’];
+        echo $id;
     }
 }
