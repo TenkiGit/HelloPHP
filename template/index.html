@@ -56,9 +56,9 @@
 	?> -->
 	
 	
-	<?php if(!empty($params){ ?>
-	<?php echo'<a href="./logout.php">ログアウト</a>' ?>
-	<?php } ?>
+	<?php if($params['ID'] != NULL){
+	echo'<a href="./logout.php">ログアウト</a>' 
+	} ?>
 
 </div>
 </body>
