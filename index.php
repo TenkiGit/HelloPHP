@@ -14,6 +14,10 @@ try{
 function main(){
 	//テンプレートを指定
 	$template = './template/index.html';
+	$params['ID'];
+	
+	
+
 	$contents = common::html_output($template,$params);
 
 	
@@ -23,6 +27,7 @@ function main(){
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
 		echo 'ようこそ';
+		
 		
 	}else if($_COOKIE['id']==NULL){
 		echo '<a href=../login.php>ログインページへ移動</a>';
