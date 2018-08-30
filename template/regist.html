@@ -39,6 +39,9 @@
 				alert("パスワードが一致しません");
 				return false;
 		}
+		if(document.regist.password.value != document.regist.repassword.value){
+			return true;
+		}
 				// for(i = 0; i < document.foo.length; i++) {
 				// 	if (document.foo.elements[i].type == "text") {
 				// 		if (document.foo.elements[i].value == '') {
@@ -47,6 +50,7 @@
 				// 		}
 				// 	}
 				// }
+		return false;
 	}
 </script>
 <div class="container">
