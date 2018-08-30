@@ -31,11 +31,9 @@
 		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''){
 			alert("全ての項目において入力してください");
 			return false;
-		}else if(document.regist.password.type=='text' && document.regist.repassword.type=='text'){
-			if(document.regist.password.value == document.regist.repassword.value){
+		}else if(document.regist.password.value == document.regist.repassword.value){
 				alert("パスワードが一致しません");
 				return false;
-			}
 		}
 				// for(i = 0; i < document.foo.length; i++) {
 				// 	if (document.foo.elements[i].type == "text") {
@@ -52,7 +50,7 @@
     <form name= 'regist'action='/regist.php' method="POST"onsubmit="return check();">
         ユーザーID:<input type="text" name= "email"><br>
 		パスワード:<input tupe="text" name= "password"><br>
-		パスワードを再入力<input tupe="text" name="repassword"><br>
+		パスワードを再入力:<input tupe="text" name="repassword"><br>
 
 
 		<input type = 'submit' value ='登録' name='登録ボタン'>

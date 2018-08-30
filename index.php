@@ -32,6 +32,7 @@ function main(){
 	{
 		echo 'ようこそ';
 		// var_dump($params);
+		echo'$_COOKIE["Name"]さま';
 		
 		
 	}else if($_COOKIE['id']==NULL){
