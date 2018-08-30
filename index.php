@@ -16,12 +16,12 @@ function main(){
 	$template = './template/index.html';
 	$params['ID'];
 
-	
-	$params = user_data::get_userdata();//ここがNG
-
+	if($_COOKIE["ID"] != NULL){
+		$params = user_data::get_userdata();//ここがNG
+	}
 	// $params = $_COOKIE;
 
-	$contents = common::html_output($template,$params,$_COOKIE);
+	$contents = common::html_output($template,$params);
 
 	
 
