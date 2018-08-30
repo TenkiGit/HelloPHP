@@ -33,15 +33,9 @@ class common {
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
 
-                foreach($result as $data){
-                    if ($data['email']== $inpdata['mail'] && $data['password']==$inpdata['password']){
-                        $count=$count+1;
-                        // var_dump($data);
-                    }
-                }
 
                 
-                return $conn;
+                return $result;
     }
     public static function get_count_user($Email,$Pass){
         if($Email==null||$Pass==null){
