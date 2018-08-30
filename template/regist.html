@@ -28,12 +28,14 @@
 
 <script type="text/javascript">
 	function check() {
+		console.log(document.regist.password.value);
+		console.log(document.regist.repassword.value);
 		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''){
 			alert("全ての項目において入力してください");
 			return false;
 		}
 		
-		if(document.regist.password.value!=document.regist.repassword.value){
+		if(document.regist.password.value != document.regist.repassword.value){
 				alert("パスワードが一致しません");
 				return false;
 		}
