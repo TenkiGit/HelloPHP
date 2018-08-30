@@ -30,7 +30,8 @@
 	function check() {
 		console.log(document.regist.password.value);
 		console.log(document.regist.repassword.value);
-		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''){
+		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''
+			||document.regist.name.value||document.regist.job.value){
 			alert("全ての項目において入力してください");
 			return false;
 		}
@@ -57,7 +58,9 @@
 <div class="container">
     <h3>新規登録ページ</h3>
     <form name= 'regist'action='/regist.php' method="POST"onsubmit="return check();">
-        ユーザーID:<input type="text" name= "email"><br>
+		ユーザーID:<input type="text" name= "email"><br>
+		名前:<input type='text' name='name'><br>
+		職業:<input type='text' name='job'><br>
 		パスワード:<input tupe="text" name= "password"><br>
 		パスワードを再入力:<input tupe="text" name="repassword"><br>
 

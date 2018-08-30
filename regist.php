@@ -15,7 +15,14 @@ function main(){
 	//テンプレートを指定
 	$template = './template/regist.html';
 	$params["user_data"] = [];
+    $email='';
+    $pass='';
+    
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    
 
+    setcookie()
 
 
 
