@@ -45,8 +45,8 @@ class database_control {
 
         // インジェクション対策 　メタコマンド除去
         //$sql = mysql_escape_string($sql);
-        $sql = str_replace("¥C", "", $sql);
-        $sql = str_replace("¥c", "", $sql);
+        $sql = str_replace("\C", "", $sql);
+        $sql = str_replace("^c", "", $sql);
         $sql = str_replace("\C", "", $sql);
         $sql = str_replace("\c", "", $sql);
 
