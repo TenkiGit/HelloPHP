@@ -27,7 +27,7 @@ function main(){
         
         $user_data = common::get_olluser();
         $user_count = common::get_count_user($_POST['email'],$_POST['password']);
-        var_dump($user_count);
+        var_dump($user_data);
 
         //全部参照しサーチ
         foreach($user_data as $data){
