@@ -28,9 +28,11 @@
 
 <script type="text/javascript">
 	function check() {
-		if(document.regist.elements['password'].value == document.regist.elements['repassword'].value){
-			alert("パスワードが一致しません");
-			return false;
+		if(document.regist.elements['password'].type=='text' && document.regist.elements['repassword'].type=='text'){
+			if(document.regist.elements['password'].value == document.regist.elements['repassword'].value){
+				alert("パスワードが一致しません");
+				return false;
+			}
 		}
 				// for(i = 0; i < document.foo.length; i++) {
 				// 	if (document.foo.elements[i].type == "text") {
