@@ -32,9 +32,8 @@
 			alert("全ての項目において入力してください");
 			return false;
 		}
-		var pass = document.getElementById("password").value;
-		var repass = document.getElementById("repassword").value;
-		if(pass!=repass){
+		
+		if(document.regist.password.value!=document.regist.repassword.value){
 				alert("パスワードが一致しません");
 				return false;
 		}
