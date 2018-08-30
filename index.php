@@ -28,7 +28,7 @@ function main(){
 
 	//出力
 	echo $contents;
-	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
+	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'] != NULL)
 	{
 		echo 'ようこそ';
 		// var_dump($params);

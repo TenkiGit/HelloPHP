@@ -48,6 +48,7 @@ function main(){
             setcookie('Name',$name,time()+(3600*24));
             setcookie('Email',$email,time()+(3600*24));
             setcookie('userdata',$user_data,time()+(25));
+            setcookie('count',$user_count,time()+(35));
         }
 
 
