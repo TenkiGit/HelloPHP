@@ -24,4 +24,17 @@ class common {
     return $contents;
 
     }
+    public static function get_olluser(){
+        $conn   = database_control::getConnection() ;
+                $sql  = "SELECT * AS CNT FROM テーブル名";
+                //$sql .= " WHERE EMAIL        = :email";
+                $param = array();
+                //array_push ( $param , array('key'=>':email'        , 'value'=> メールアドレス          , 'type'=>PDO::PARAM_STR) );
+                $stmt   = database_control::execute( $conn, $sql , $param );        // execute
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
+
+                
+                return $result;
+    }
 }
+

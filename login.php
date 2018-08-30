@@ -20,8 +20,8 @@ function main(){
         $user_id ='';
         $name = '';
 
-        $user_data = user_data::get_userdata();//全ユーザーデータの取得
-        // $user_data = database_control::getConnection();
+        // $user_data = user_data::get_userdata();//全ユーザーデータの取得
+        $user_data = common::get_olluser();
         
         //全部参照しサーチ
         foreach($user_data as $data){
