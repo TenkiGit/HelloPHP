@@ -31,4 +31,5 @@ function main(){
 	//出力
     echo $contents;
 }
+//inputtypehiddon
 
