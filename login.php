@@ -11,7 +11,7 @@ try{
 	echo $e;
 }
 
-
+//emailを返す
 function main(){
     if($_SERVER["REQUEST_METHOD"]== 'POST'){
         // var_dump($_POST);
@@ -48,7 +48,7 @@ function main(){
         // if($flag==TRUE){
         if($user_count==0){
             // echo '<h3>ログイン成功</h3>';
-            var_dump($flag); 
+            // var_dump($flag); 
             setcookie('ID',$user_id,time()+(10));//IDと変数(data)と有効時間
             setcookie('Name',$name,time()+(3600*24));
             setcookie('Email',$email,time()+(3600*24));
