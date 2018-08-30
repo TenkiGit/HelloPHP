@@ -29,7 +29,7 @@ function main(){
         $user_count = common::get_count_user($_POST['email'],$_POST['password']);
         var_dump($user_data);
 
-        if($user_count !=0){
+        if($user_count !=1){
             header("Location:/login.php");//リダイレクト
             exit();
         }
