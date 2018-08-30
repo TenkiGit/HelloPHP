@@ -35,8 +35,8 @@ function main(){
 
 	//出力
     echo $contents;
-    
-    header("Location:/confirm.php");//リダイレクト
-    exit();
-	
+    if(isset($_POST['登録ボタン'])){
+        header("Location:/confirm.php");//リダイレクト
+        exit();
+    }
 }
