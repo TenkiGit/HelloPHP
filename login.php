@@ -24,24 +24,25 @@ function main(){
         // $user_data = user_data::get_userdata();//全ユーザーデータの取得
         // <!-- ログインようの関数を作る -->
         // <!-- 値渡ししIDとパスの人数を返す -->   
-        var_dump($user_data);//確認用
-        $user_data = common::get_olluser($_POST);
+        
+        $user_data = common::get_olluser();
+        $user_count = common::get_count_user($_POST['email'],$_POST['password']);
         
 
-        // //全部参照しサーチ
-        // foreach($user_data as $data){
-        //     if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
-        //     {
-        //         $flag = TRUE;
-        //         $user_id = $data['ID'];
-        //         $name = $data['user_name'];
-        //         $email = $data['email'];
-        //     }
-        // }
+        //全部参照しサーチ
+        foreach($user_data as $data){
+            if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
+            {
+                $flag = TRUE;
+                $user_id = $data['ID'];
+                $name = $data['user_name'];
+                $email = $data['email'];
+            }
+        }
         
         //Trueの場合
-        // if($flag==TRUE){
-        if($userdata ==1 ){
+        if($flag==TRUE){
+        // if($userdata ==1 ){
             // echo '<h3>ログイン成功</h3>';
             var_dump($flag); 
             setcookie('ID',$user_id,time()+(10));//IDと変数(data)と有効時間
