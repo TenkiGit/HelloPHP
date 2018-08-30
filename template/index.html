@@ -63,7 +63,10 @@
 	<ul>
 		<?php if($params['user_data'] != NULL){  ?>
 			<?php var_dump($params); ?>  
-			 
+			 <?php 	//foreach($params['user_name'] as $data){ ?>
+				<?php echo'<li>$data['user_name']</li>'; ?>
+				 <?php echo'var_dump($data)'; ?> 
+			 <?php //} ?>
 		<?php } ?>
 	</ul>
 

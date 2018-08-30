@@ -14,7 +14,8 @@ try{
 function main(){
 	//テンプレートを指定
 	$template = './template/index.html';
-	$params['ID'];
+	$params["user_data"] = [];
+	// $params['ID'];
 
 	if($_COOKIE["ID"] != NULL){
 		$params['user_data'] = user_data::get_userdata();//ここがNG
