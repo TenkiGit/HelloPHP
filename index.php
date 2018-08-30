@@ -18,7 +18,7 @@ function main(){
 	// $params['ID'];
 
 	if(isset($_COOKIE["ID"]) != NULL){
-		$params['user_data'] = user_data::get_userdata();//ここがNG
+		$params['user_data'] = common::get_olluser();
 	}
 	$params['Cookie'] = $_COOKIE;
 
