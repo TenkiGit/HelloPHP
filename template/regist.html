@@ -33,6 +33,9 @@
 				alert("パスワードが一致しません");
 				return false;
 			}
+		}else if(document.regist.elements['email'].value == '' || document.regist.elements['password'].value == '' || document.regist.elements['repassword'].value == ''){
+			alert("全ての項目において入力してください");
+			return false;
 		}
 				// for(i = 0; i < document.foo.length; i++) {
 				// 	if (document.foo.elements[i].type == "text") {
