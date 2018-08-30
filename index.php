@@ -17,7 +17,7 @@ function main(){
 	$params["user_data"] = [];
 	// $params['ID'];
 
-	if($_COOKIE["ID"] != NULL){
+	if(isset($_COOKIE["ID"]) != NULL){
 		$params['user_data'] = user_data::get_userdata();//ここがNG
 	}
 	$params['Cookie'] = $_COOKIE;
@@ -41,3 +41,6 @@ function main(){
 
 //aタグでHTMLを作る
 //login.phpとlogin.htmlを作成
+
+//mysql ユーザー作成 1つ
+//
