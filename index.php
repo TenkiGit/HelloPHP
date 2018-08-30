@@ -21,7 +21,7 @@ function main(){
 
 	// $params = $_COOKIE;
 
-	$contents = common::html_output($template,$params);
+	$contents = common::html_output($template,$params,$_COOKIE);
 
 	
 
