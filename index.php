@@ -32,7 +32,7 @@ function main(){
 	{
 		echo 'ようこそ';
 		// var_dump($params);
-		echo '$_COOKIE["Name"]';
+		echo $_COOKIE["Name"];
 		echo 'さま';
 
 		
