@@ -56,15 +56,19 @@
 	?> -->
 	
 	
-	<?php if($params['ID'] != NULL){ ?>
+	<?php if($params['Cookie']['ID'] != NULL){ ?>
 	<a href="../logout.php">ログアウト</a>
 	<?php } ?>
 
 	<ul>
-		<?php if($params['ID'] != NULL){ ?>
-			<?php foreach($params['user_data'] as $data) ?>
-				<?php echo '<li>$data</li>'; ?>
-				
+		<?php if($params['user_data'] != NULL){  ?>
+			<!-- <?php var_dump($params); ?>  OK!-->
+			<?php 
+			foreach($params['user_name'] as $data){ 
+				var_dump($data);
+				echo'<li>$data['user_name']</li>';
+				<!-- <?php echo'var_dump($data)'; ?> -->
+			 } ?>
 		<?php } ?>
 	</ul>
 

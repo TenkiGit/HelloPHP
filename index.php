@@ -16,10 +16,10 @@ function main(){
 	$template = './template/index.html';
 	$params['ID'];
 
-	
-	$params = user_data::get_userdata();//ここがNG
-
-	$params = $_COOKIE;
+	if($_COOKIE["ID"] != NULL){
+		$params['user_data'] = user_data::get_userdata();//ここがNG
+	}
+	$params['Cookie'] = $_COOKIE;
 
 	$contents = common::html_output($template,$params);
 
@@ -30,7 +30,7 @@ function main(){
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
 		echo 'ようこそ';
-		var_dump($params);
+		// var_dump($params);
 		
 		
 	}else if($_COOKIE['id']==NULL){
