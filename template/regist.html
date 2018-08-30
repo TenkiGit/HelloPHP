@@ -28,10 +28,10 @@
 
 <script type="text/javascript">
 	function check() {
-		if(document.regist.elements['email'].value == '' || document.regist.elements['password'].value == '' || document.regist.elements['repassword'].value == ''){
+		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''){
 			alert("全ての項目において入力してください");
 			return false;
-		}else if(document.regist.elements['password'].type=='text' && document.regist.elements['repassword'].type=='text'){
+		}else if(document.regist.password.type=='text' && document.regist.repassword.type=='text'){
 			if(document.regist.password.value == document.regist.repassword.value){
 				alert("パスワードが一致しません");
 				return false;
