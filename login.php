@@ -16,9 +16,9 @@ function main(){
     if($_SERVER["REQUEST_METHOD"]== 'POST'){
         // var_dump($_POST);
         $flag = FALSE;
-        $email ='';
-        $user_id ='';
-        $name = '';
+        $email ='1';
+        $user_id ='1';
+        $name = '1';
         $user_data = 0;
 
         // $user_data = user_data::get_userdata();//全ユーザーデータの取得
