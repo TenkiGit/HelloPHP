@@ -23,15 +23,33 @@
 	<title>hello world!!</title>
 	<meta property="og:title" content="">
 </head>
+<script type="text/javascript">
+	function check() {
+		if(document.regist.elements['password']==document.regist.elements['repassword']){
+			alert("パスワードが一致しません");
+			return false;
+		}
+		// for(i = 0; i < document.foo.length; i++) {
+		// 	if (document.foo.elements[i].type == "text") {
+		// 		if (document.foo.elements[i].value == '') {
+		// 			 alert("未入力の項目があります。");
+		// 			 return false;
+		// 		}
+		// 	}
+		// }
+	}
+</script>
 <body>
 
 <div class="container">
     <h3>新規登録ページ</h3>
-    <form action='/login.php' method="POST">
+    <form name= 'regist'action='/regist.php' method="POST"onsubmit="return check();">
         ユーザーID:<input type="text" name= "email"><br>
-        パスワード:<input tupe="text" name= "password"><br>
-		<input type = 'submit' value ='送信' name='送信ボタン'>
-		<input type = 'submit' value ='新規登録' name='新規登録ボタン'>
+		パスワード:<input tupe="text" name= "password"><br>
+		パスワードを再入力<input tupe="text" name="repassword"><br>
+
+
+		<input type = 'submit' value ='登録' name='登録ボタン'>
     </form>
 
 </div>
