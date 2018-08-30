@@ -34,6 +34,9 @@ function main(){
 	
 
 	//出力
-	echo $contents;
+    echo $contents;
+    
+    header("Location:/confirm.php");//リダイレクト
+    exit();
 	
 }
