@@ -19,7 +19,7 @@ function main(){
 	
 	$params = user_data::get_userdata();//ここがNG
 
-	$params = $_COOKIE;
+	// $params = $_COOKIE;
 
 	$contents = common::html_output($template,$params);
 
