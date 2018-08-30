@@ -17,7 +17,7 @@ function main(){
 	$params['ID'];
 
 	
-	$params['user_data'] = user_data::get_userdata();//ここがNG
+	$params = user_data::get_userdata();//ここがNG
 
 	$params = $_COOKIE;
 
