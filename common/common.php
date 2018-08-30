@@ -33,8 +33,7 @@ class common {
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
 
-
-                
+                var_dump($result);
                 return $result;
     }
     public static function get_count_user($Email,$Pass){
