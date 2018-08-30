@@ -24,6 +24,7 @@ class user_data {
             'email'     => 'test03@coosy.co.jp',
             'password'  => 'coosy0303'
         ];
+        
         return $params;
     }
 }
