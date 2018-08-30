@@ -32,8 +32,7 @@ class common {
                 //array_push ( $param , array('key'=>':email'        , 'value'=> メールアドレス          , 'type'=>PDO::PARAM_STR) );
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
-
-                var_dump($result);
+                
                 return $result;
     }
     public static function get_count_user($Email,$Pass){
