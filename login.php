@@ -21,8 +21,11 @@ function main(){
         $name = '';
 
         // $user_data = user_data::get_userdata();//全ユーザーデータの取得
-        $user_data = common::get_olluser();
-        
+        // <!-- ログインようの関数を作る -->
+        // <!-- 値渡ししIDとパスの人数を返す -->   
+        $user_data = common::get_olluser($_POST['email'],$_POST['password']);
+        var_dump($user_data);//確認用
+
         //全部参照しサーチ
         foreach($user_data as $data){
             if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])

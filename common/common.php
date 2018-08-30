@@ -24,7 +24,9 @@ class common {
     return $contents;
 
     }
-    public static function get_olluser(){
+    public static function get_olluser($inpEmail,$inpPass){
+        $count=0;
+
         $conn   = database_control::getConnection() ;
                 $sql  = "SELECT *  FROM user_data";
                 //$sql .= " WHERE EMAIL        = :email";
@@ -33,8 +35,14 @@ class common {
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
 
+                foreach($result as $data){
+                    if ($data['email']== $inpEmail && $data['password']==$inpPass){
+                        $count=$count+1;
+                    }
+                }
 
-                return $result;
+                
+                return $count;
     }
 }
 
