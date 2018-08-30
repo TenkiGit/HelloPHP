@@ -32,7 +32,7 @@ class common {
                 //array_push ( $param , array('key'=>':email'        , 'value'=> メールアドレス          , 'type'=>PDO::PARAM_STR) );
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
-                
+
                 return $result;
     }
     public static function get_count_user($Email,$Pass){
@@ -49,7 +49,7 @@ class common {
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
 
                 foreach($result as $data){
-                    if ($data['email']== $inpdata['mail'] && $data['password']==$inpdata['password']){
+                    if ($data['email']== $Email && $data['password']==$Pass){
                         $count=$count+1;
                         // var_dump($data);
                     }
