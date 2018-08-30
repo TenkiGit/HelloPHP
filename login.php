@@ -29,10 +29,10 @@ function main(){
         $user_count = common::get_count_user($_POST['email'],$_POST['password']);
         var_dump($user_data);
 
-        // if($user_count !=1){
-        //     header("Location:/login.php");//リダイレクト
-        //     exit();
-        // }
+        if($user_count !=1){
+            header("Location:/login.php");//リダイレクト
+            exit();
+        }
         //全部参照しサーチ
         foreach($user_data as $data){
             if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
