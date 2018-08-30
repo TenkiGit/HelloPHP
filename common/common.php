@@ -38,7 +38,7 @@ class common {
                 foreach($result as $data){
                     if ($data['email']== $inpdata['mail'] && $data['password']==$inpdata['password']){
                         $count=$count+1;
-                        var_dump($data);
+                        // var_dump($data);
                     }
                 }
 
