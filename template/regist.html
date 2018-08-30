@@ -39,7 +39,8 @@
 				alert("パスワードが一致しません");
 				return false;
 		}
-		if(document.regist.password.value != document.regist.repassword.value){
+		if(document.regist.password.value == document.regist.repassword.value){
+			alert("ようこそ！");
 			return true;
 		}
 				// for(i = 0; i < document.foo.length; i++) {
