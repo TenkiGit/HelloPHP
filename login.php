@@ -29,6 +29,10 @@ function main(){
         $user_count = common::get_count_user($_POST['email'],$_POST['password']);
         var_dump($user_data);
 
+        if($user_count !=0){
+            header("Location:/login.php");//リダイレクト
+            exit();
+        }
         //全部参照しサーチ
         foreach($user_data as $data){
             if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
@@ -41,13 +45,13 @@ function main(){
         }
         
         //Trueの場合
-        if($flag==TRUE){
+        // if($flag==TRUE){
+        if($user_count==0){
             // echo '<h3>ログイン成功</h3>';
             var_dump($flag); 
             setcookie('ID',$user_id,time()+(10));//IDと変数(data)と有効時間
             setcookie('Name',$name,time()+(3600*24));
             setcookie('Email',$email,time()+(3600*24));
-            setcookie('userdata',$user_data,time()+(25));
             setcookie('count',$user_count,time()+(35));
         }
 
