@@ -31,7 +31,7 @@
 		console.log(document.regist.password.value);
 		console.log(document.regist.repassword.value);
 		if(document.regist.email.value == '' || document.regist.password.value == '' || document.regist.repassword.value == ''
-			||document.regist.name.value||document.regist.job.value){
+			||document.regist.name.value==''||document.regist.job.value==''){
 			alert("全ての項目において入力してください");
 			return false;
 		}
