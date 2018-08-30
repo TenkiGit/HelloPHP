@@ -16,10 +16,10 @@ function main(){
 	$template = './template/index.html';
 	$params['ID'];
 
-	if($_COOKIE["ID"] != NULL){
-		$params = user_data::get_userdata();//ここがNG
-	}
-	// $params = $_COOKIE;
+	// if($_COOKIE["ID"] != NULL){
+	// 	$params = user_data::get_userdata();//ここがNG
+	// }
+	$params = $_COOKIE;
 
 	$contents = common::html_output($template,$params);
 
