@@ -26,7 +26,7 @@ class common {
     }
     public static function get_olluser($inpEmail,$inpPass){
         $count=0;
-
+        echo'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
         $conn   = database_control::getConnection() ;
                 $sql  = "SELECT *  FROM user_data";
                 //$sql .= " WHERE EMAIL        = :email";
