@@ -30,7 +30,7 @@ function main(){
 	if($_COOKIE['ID']!=NULL && $_COOKIE['Name']!= NULL && $_COOKIE['Email'])
 	{
 		echo 'ようこそ';
-		var_dump($params);
+		var_dump($params[2]);
 		
 		
 	}else if($_COOKIE['id']==NULL){
