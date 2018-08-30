@@ -13,7 +13,9 @@ try{
 
 //emailを返す
 function main(){
-    if($_SERVER["REQUEST_METHOD"]== 'POST'){
+    if(isset($_POST['送信ボタン']))
+{   
+     if($_SERVER["REQUEST_METHOD"]== 'POST'){
         // var_dump($_POST);
         $flag = FALSE;
         $email ='';
@@ -59,6 +61,10 @@ function main(){
         header("Location:/");//リダイレクト
         exit();
     }
+}else if(isset($_POST['新規登録ボタン'])){
+    header("Location:/regist.php");
+}
+
 	//テンプレートを指定
 	$template = './template/login.html';
     $contents = common::html_output($template,$params);
