@@ -83,12 +83,12 @@ class common {
         $stmt   = database_control::execute( $conn, $sql , $param );        // execute
         
     }
-    public static function comp_user($ID,$token){
+    public static function comp_user($user_id,$token){
         $conn   = database_control::getConnection() ;
                 $sql  = "SELECT *  FROM user_data";
-                $sql .= " WHERE ID AND token        = :ID,:token";
+                $sql .= " WHERE ID AND token        = :user_id,:token";
                 $param = array();
-                array_push ( $param , array('key'=>':ID'        , 'value'=> $ID          , 'type'=>PDO::PARAM_STR) );
+                array_push ( $param , array('key'=>':ID'        , 'value'=> $user_id          , 'type'=>PDO::PARAM_STR) );
                 array_push ( $param , array('key'=>':token'        , 'value'=> $token          , 'type'=>PDO::PARAM_STR) );
                 $stmt   = database_control::execute( $conn, $sql , $param );        // execute
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
