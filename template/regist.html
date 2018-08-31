@@ -60,7 +60,7 @@
 	<form name= 'regist'action='/confirm.php' method="POST"onsubmit="return check();">
 		
 
-		メールアドレス:<input type="text" name= "email" value=<?php echo $params['inp_email'] ?> >
+		メールアドレス:<input type="text" name= "email" value="$params['inp_email']" >
 		<br>
 		名前:<input type='text' name='name'><br>
 		職業:<input type='text' name='job'><br>
