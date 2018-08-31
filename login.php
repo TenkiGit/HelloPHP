@@ -29,7 +29,6 @@ function main(){
         
         $user_data = common::get_olluser();
         $user_count = common::get_count_user($_POST['email'],$_POST['password']);
-        var_dump($user_data);
 
         if($user_count !=1){
             header("Location:/login.php");//リダイレクト
@@ -46,10 +45,9 @@ function main(){
             }
         }
         
-        
         //Trueの場合
         // if($flag==TRUE){
-        if($user_count==1){
+        if($user_count==1&&$flag==TRUE){
             // echo '<h3>ログイン成功</h3>';
             // var_dump($flag); 
             setcookie('ID',$user_id,time()+(3600));//IDと変数(data)と有効時間(秒)
