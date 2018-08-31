@@ -38,7 +38,7 @@ function main(){
 
     //DBにインサート
     //DB
-    var_dump($token);
+    // var_dump($token);
     $db_add = $_POST;
     $db_add['token']= $token;
 
