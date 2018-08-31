@@ -20,6 +20,7 @@ function main(){
     
     $email = $_POST['email'];
     $pass = $_POST['password'];
+    var_dump($params);
     
 
     setcookie('Name',$_POST['name'],time()+(3600));
