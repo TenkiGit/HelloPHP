@@ -104,4 +104,5 @@ class common {
         $stmt   = database_control::execute( $conn, $sql , $param );        // execute
         // $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
     }
+
 }
