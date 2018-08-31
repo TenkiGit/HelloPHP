@@ -30,7 +30,7 @@
 	<a href="/regist.php">戻る</a>
 	<h4>内容確認</h4>
 
-	<form action= "/regist.php" method="POST"></form>
+	
 	<div>
 		<label>・名前</label>
 		<p><?php echo $params['name'] ?></p>
@@ -49,7 +49,7 @@
 	</div>
 
 
-
+	<form action= "/regist.php" method="POST">
 	<input type='hidden' name ="inp_name" value=<?php $params['name'] ?> >
 	<input type="hidden" name="inp_email" value=<?php $params['email'] ?> >
 	<input type="hidden" name="inp_job" value=<?php echo $params['job'] ?> >
