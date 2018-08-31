@@ -18,8 +18,8 @@ function main(){
 	// $params['ID'];
     // var_dump($_POST);
 
-    // mb_language("Japanese");
-    // mb_internal_encoding("UTF-8");
+    mb_language("Japanese");
+    mb_internal_encoding("UTF-8");
     $mail_add = $_POST['inp_email'];
 
     if(mb_send_mail($mail_add, 'test', 'テストメール')){
