@@ -37,7 +37,7 @@ function main(){
         }
         //全部参照しサーチ
         foreach($user_data as $data){
-            if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password'])
+            if($data['email'] == $_POST['email'] && $data['password'] == $_POST['password']&&$data['status']==1)
             {
                 $flag = TRUE;
                 $user_id = $data['ID'];
@@ -46,12 +46,13 @@ function main(){
             }
         }
         
+        
         //Trueの場合
         // if($flag==TRUE){
         if($user_count==1){
             // echo '<h3>ログイン成功</h3>';
             // var_dump($flag); 
-            setcookie('ID',$user_id,time()+(10));//IDと変数(data)と有効時間
+            setcookie('ID',$user_id,time()+(3600));//IDと変数(data)と有効時間(秒)
             setcookie('Name',$name,time()+(3600*24));
             setcookie('Email',$email,time()+(3600*24));
             // setcookie('count',$user_count,time()+(35));
