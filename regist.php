@@ -27,11 +27,6 @@ function main(){
     var_dump($_POST);
     
 
-    setcookie('Name',$_POST['name'],time()+(3600));
-    setcookie('jpb',$_POST['job'],time()+(3600));
-    setcookie('Email',$_POST['email'],time()+(3600));
-    setcookie('password',$_POST['password'],time()+(3600));
-
 
 
 	$contents = common::html_output($template,$params);
