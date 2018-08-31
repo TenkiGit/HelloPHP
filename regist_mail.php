@@ -13,11 +13,11 @@ try{
 
 function main(){
 	//テンプレートを指定
-	$template = './template/index.html';
-	$params["user_data"] = [];
+	$template = './template/regist_mail.html';
+	$params = [];
 	// $params['ID'];
 
-	var_dump($_POST);
+	// var_dump($_POST);
 
 	$contents = common::html_output($template,$params);
 
