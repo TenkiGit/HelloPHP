@@ -17,8 +17,9 @@ function main(){
      $params = [];
     
     $data=[];
-    var_dump($_GET);
-
+    // var_dump($_GET);
+    $data = common::comp_user($_GET['user_id'],$_GET[$token]);
+    var_dump($data);
 
 	$contents = common::html_output($template,$params);
 
