@@ -22,8 +22,11 @@ function main(){
     // mb_internal_encoding("UTF-8");
     $mail_add = $_POST['inp_email'];
 
-    mb_send_mail($mail_add,'test','testメールです');
-
+    if(mb_send_mail($mail_add, 'test', 'テストメール')){
+        echo "メールを送信しました";
+      } else {
+        echo "メールの送信に失敗しました";
+      };
 	$contents = common::html_output($template,$params);
 
 	
