@@ -71,10 +71,10 @@ class common {
     }
     public static function create_user($add_data){
         $conn   = database_control::getConnection() ;
-        $sql  = "INSERT INTO  user_data (use_name,job,email,password,token,status) VALUES(:use_name,:job,:email,:password,:token,:status)";
+        $sql  = "INSERT INTO  user_data (user_name,job,email,password,token,status) VALUES(:user_name,:job,:email,:password,:token,:status)";
         // $sql .= " WHERE taken        = :token";
         $param = array();
-        array_push ( $param , array('key'=>':use_name'        , 'value'=> $add_data['inp_name']          , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':user_name'        , 'value'=> $add_data['inp_name']          , 'type'=>PDO::PARAM_STR) );
         array_push ( $param , array('key'=>':job'        , 'value'=> $add_data['inp_job']       , 'type'=>PDO::PARAM_STR) );
         array_push ( $param , array('key'=>':email'        , 'value'=> $add_data['inp_email']          , 'type'=>PDO::PARAM_STR) );
         array_push ( $param , array('key'=>':password'        , 'value'=> $add_data['inp_pass']          , 'type'=>PDO::PARAM_STR) );
