@@ -43,7 +43,8 @@ function main(){
     $db_add['token']= $token;
 
     common::create_user($db_add);
-
+    $resalt = common::get_user_token($token);
+    var_dump($resalt);
 
 	$contents = common::html_output($template,$params);
 
