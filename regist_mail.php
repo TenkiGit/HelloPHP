@@ -31,12 +31,18 @@ function main(){
     //tokenの発行
     $token=0;
     $unix_taime=0;
-
     $unix_taime = time();
-    
+    $db_add = [];
+
     $token = md5($unix_taime.rand());
 
+    //DBにインサート
+    //DB
     var_dump($token);
+    $db_add = $_POST;
+    $db_add['token']= $token;
+
+    common::create_user($db_add);
 
 
 	$contents = common::html_output($template,$params);

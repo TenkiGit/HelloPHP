@@ -58,5 +58,29 @@ class common {
                 
                 return $count;
     }
-}
+    public static function get_user_token($taken){
+        $conn   = database_control::getConnection() ;
+        $sql  = "SELECT *  FROM user_data";
+        $sql .= " WHERE taken        = :token";
+        $param = array();
+        array_push ( $param , array('key'=>':token'        , 'value'=> $token          , 'type'=>PDO::PARAM_STR) );
+        $stmt   = database_control::execute( $conn, $sql , $param );        // execute
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
+
+        return $result;
+    }
+    public static function create_user($add_data){
+        $conn   = database_control::getConnection() ;
+        $sql  = "INSERT INTO *  FROM user_data (use_name,job,email,password,token,status) VALUES(:use_name,:job,email,:password,:token,:status)";
+        // $sql .= " WHERE taken        = :token";
+        $param = array();
+        array_push ( $param , array('key'=>':use_name'        , 'value'=> $add_data['inp_name']          , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':job'        , 'value'=> $add_data['inp_job']       , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':email'        , 'value'=> $add_data['inp_email']          , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':password'        , 'value'=> $add_data['inp_pass']          , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':token'        , 'value'=> $add_data['token']          , 'type'=>PDO::PARAM_STR) );
+        array_push ( $param , array('key'=>':status'        , 'value'=> 2                         , 'type'=>PDO::PARAM_STR) );
+        $stmt   = database_control::execute( $conn, $sql , $param );        // execute
+        
+    }
 
