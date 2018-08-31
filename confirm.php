@@ -23,7 +23,7 @@ function main(){
 	
 	$_POST['password']=masking($_POST['password']);//パスワードを全て**文字にする
 	
-	$params['Cookie'] = $_POST;//クッキーをパラメータに代入
+	$params['user_data'] = $_POST;//クッキーをパラメータに代入
 	$contents = common::html_output($template,$params);
 
 	
