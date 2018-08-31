@@ -71,7 +71,7 @@ class common {
     }
     public static function create_user($add_data){
         $conn   = database_control::getConnection() ;
-        $sql  = "INSERT INTO *  FROM user_data (use_name,job,email,password,token,status) VALUES(:use_name,:job,email,:password,:token,:status)";
+        $sql  = "INSERT INTO *  FROM user_data (use_name,job,email,password,token,status) VALUES(:use_name,:job,:email,:password,:token,:status)";
         // $sql .= " WHERE taken        = :token";
         $param = array();
         array_push ( $param , array('key'=>':use_name'        , 'value'=> $add_data['inp_name']          , 'type'=>PDO::PARAM_STR) );
