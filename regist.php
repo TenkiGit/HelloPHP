@@ -23,6 +23,8 @@ function main(){
     $params['inp']=$_POST['inp_email'];
     $params['inp']=$_POST['inp_name'];
     $params['inp']=$_POST['inp_job'];
+
+    var_dump($params);
     
 
     setcookie('Name',$_POST['name'],time()+(3600));
