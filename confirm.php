@@ -21,9 +21,9 @@ function main(){
 	
 	
 	
-	$_COOKIE['password']=masking($_COOKIE['password']);//パスワードを全て**文字にする
+	$_POST['password']=masking($_POST['password']);//パスワードを全て**文字にする
 	
-	$params['Cookie'] = $_COOKIE;//クッキーをパラメータに代入
+	$params['Cookie'] = $_POST;//クッキーをパラメータに代入
 	$contents = common::html_output($template,$params);
 
 	
