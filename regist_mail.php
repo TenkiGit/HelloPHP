@@ -17,7 +17,7 @@ function main(){
 	$params["user_data"] = [];
 	// $params['ID'];
 
-	
+	var_dump($_POST);
 
 	$contents = common::html_output($template,$params);
 
