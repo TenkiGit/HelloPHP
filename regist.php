@@ -14,7 +14,7 @@ try{
 function main(){
 	//テンプレートを指定
 	$template = './template/regist.html';
-	$params["user_data"] = [];
+	//$params["user_data"] = [];
     $email='';
     $pass='';
     
