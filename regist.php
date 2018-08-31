@@ -24,7 +24,7 @@ function main(){
     $params['inp']=$_POST['inp_name'];
     $params['inp']=$_POST['inp_job'];
 
-    var_dump($params);
+    var_dump($_POST);
     
 
     setcookie('Name',$_POST['name'],time()+(3600));
