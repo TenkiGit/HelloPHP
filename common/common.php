@@ -58,10 +58,10 @@ class common {
                 
                 return $count;
     }
-    public static function get_user_token($taken){
+    public static function get_user_token($token){
         $conn   = database_control::getConnection() ;
         $sql  = "SELECT *  FROM user_data";
-        $sql .= " WHERE taken        = :token";
+        $sql .= " WHERE token        = :token";
         $param = array();
         array_push ( $param , array('key'=>':token'        , 'value'=> $token          , 'type'=>PDO::PARAM_STR) );
         $stmt   = database_control::execute( $conn, $sql , $param );        // execute
