@@ -22,7 +22,7 @@ function main(){
     mb_internal_encoding("UTF-8");
     $mail_add = $_POST['inp_email'];
 
-    if(mail($mail_add, 'test', 'test_mail',"From"."s.yoshida@coosy.co.jp")){
+    if(mail($mail_add, 'test', 'test_mail',"From:"."s.yoshida@coosy.co.jp")){
         echo "メールを送信しました";
       } else {
         echo "メールの送信に失敗しました";
