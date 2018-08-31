@@ -28,6 +28,7 @@ function main(){
 	
 	$params = $_POST;
 	$contents = common::html_output($template,$params);
+	var_dump($params);
 
 	
 
