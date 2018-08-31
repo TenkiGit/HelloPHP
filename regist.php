@@ -20,7 +20,9 @@ function main(){
     
     $email = $_POST['email'];
     $pass = $_POST['password'];
-    var_dump($params);
+    $params['inp']=$_POST['inp_email'];
+    $params['inp']=$_POST['inp_name'];
+    $params['inp']=$_POST['inp_job'];
     
 
     setcookie('Name',$_POST['name'],time()+(3600));
