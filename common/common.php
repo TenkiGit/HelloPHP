@@ -95,4 +95,15 @@ class common {
 
                 return $result;
     }
+    public static function set_status_1($ID){
+        $conn   = database_control::getConnection() ;
+        $sql  = "UPDATE user_data SET status =1 WHERE ID =:ID";
+        // $sql .= " WHERE token        = :token";
+        $param = array();
+        array_push ( $param , array('key'=>':ID'        , 'value'=> $ID          , 'type'=>PDO::PARAM_STR) );
+        $stmt   = database_control::execute( $conn, $sql , $param );        // execute
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC );     // result set
+
+        return $result;
+    }
 }

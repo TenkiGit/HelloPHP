@@ -19,7 +19,10 @@ function main(){
     $data=[];
     // var_dump($_GET);
     $data = common::comp_user($_GET['user_id'],$_GET['token']);
-    var_dump($data);
+    
+    if(isset($data['0']['ID'])&&empty($data['1']['ID'])){
+        common::set_status_1($_GET['user_id']);
+    }
 
 	$contents = common::html_output($template,$params);
 
