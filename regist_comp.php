@@ -23,6 +23,8 @@ function main(){
     if(isset($data['0']['ID'])&&empty($data['1']['ID'])){
         common::set_status_1($_GET['user_id']);
         echo '登録完了しました';
+    }else{
+        echo '登録失敗です。もう一度初めからお願いします。';
     }
 
 	$contents = common::html_output($template,$params);
