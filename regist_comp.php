@@ -13,7 +13,7 @@ try{
 
 function main(){
 	//テンプレートを指定
-	$template = './template/index.html';
+	$template = './template/regist_comp.html';
      $params = [];
     
     $data=[];
