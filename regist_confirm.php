@@ -32,7 +32,7 @@ function main(){
 	echo $contents;
 	
 	if(isset($_POST['OKボタン'])){
-		header("Location:/regist_mail.php");//リダイレクト
+		header("Location:./regist_mail.php");//リダイレクト
         exit();
 	}
 }
