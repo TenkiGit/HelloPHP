@@ -19,7 +19,10 @@ function main(){
 	$template = './template/regist_confirm.html';
 	$params= [];
 	
-	
+	if(isset($_POST['OKボタン'])){
+		header("Location:./regist_mail.php");//リダイレクト
+        exit();
+	}
 	
 	$_POST['password']=masking($_POST['password']);//パスワードを全て**文字にする
 	
@@ -31,10 +34,7 @@ function main(){
 	//出力
 	echo $contents;
 	
-	if(isset($_POST['OKボタン'])){
-		header("Location:./regist_mail.php");//リダイレクト
-        exit();
-	}
+
 }
 //inputtypehiddon
 
