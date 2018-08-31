@@ -16,7 +16,7 @@ function masking($secretStr){
 
 function main(){
 	//テンプレートを指定
-	$template = './template/confirm.html';
+	$template = './template/regist_confirm.html';
 	$params= [];
 	
 	
