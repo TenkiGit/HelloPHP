@@ -16,8 +16,13 @@ function main(){
 	$template = './template/regist_mail.html';
 	$params = [];
 	// $params['ID'];
+    // var_dump($_POST);
 
-	// var_dump($_POST);
+    // mb_language("Japanese");
+    // mb_internal_encoding("UTF-8");
+    $mail_add = $_POST['inp_email'];
+
+    mb_send_mail($mail_add,'test','testメールです');
 
 	$contents = common::html_output($template,$params);
 
