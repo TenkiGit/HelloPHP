@@ -17,13 +17,13 @@ function masking($secretStr){
 function main(){
 	//テンプレートを指定
 	$template = './template/confirm.html';
-	$params["user_data"] = [];
+	$params= [];
 	
 	
 	
 	$_POST['password']=masking($_POST['password']);//パスワードを全て**文字にする
 	
-	$params['user_data'] = $_POST;//クッキーをパラメータに代入
+	$params = $_POST;//クッキーをパラメータに代入
 	$contents = common::html_output($template,$params);
 
 	
