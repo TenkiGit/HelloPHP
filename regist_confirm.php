@@ -29,7 +29,12 @@ function main(){
 	
 
 	//出力
-    echo $contents;
+	echo $contents;
+	
+	if(isset($_POST['OKボタン'])){
+		header("Location:/regist_mail.php");//リダイレクト
+        exit();
+	}
 }
 //inputtypehiddon
 
