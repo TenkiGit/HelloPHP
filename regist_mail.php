@@ -22,11 +22,23 @@ function main(){
     mb_internal_encoding("UTF-8");
     $mail_add = $_POST['inp_email'];
 
-    if(mail($mail_add, 'test', 'test_mail',"From:"."s.yoshida@coosy.co.jp")){
-        echo "メールを送信しました";
-      } else {
-        echo "メールの送信に失敗しました";
-      };
+    // if(mail($mail_add, 'test', 'test_mail',"From:"."s.yoshida@coosy.co.jp")){//ubuntuのsendmailがうまくいかず..今回は放置
+    //     echo "メールを送信しました";
+    //   } else {
+    //     echo "メールの送信に失敗しました";
+    //   };
+    
+    //tokenの発行
+    $token=0;
+    $unix_taime=0;
+
+    $unix_taime = time();
+    
+    $token = md5($unix_taime.rand());
+
+    var_dump($token);
+
+
 	$contents = common::html_output($template,$params);
 
 	
