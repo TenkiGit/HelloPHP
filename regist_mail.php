@@ -43,12 +43,15 @@ function main(){
     $db_add['token']= $token;
 
     common::create_user($db_add);
-    $resalt = common::get_user_token($token);
-    var_dump($resalt);
+    $resalt = common::get_user_token($token);//本当はこの前に個数のチェックするよ〜
+    // var_dump($resalt);
+    $params['ID']=$resalt['0']['ID'];
+    $params['token']=$resalt['0']['token'];
+
 
 	$contents = common::html_output($template,$params);
 
-	
+  
 
 	//出力
 	echo $contents;
